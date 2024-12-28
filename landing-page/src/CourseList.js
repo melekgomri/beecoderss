@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const CourseList = ({ courses, onUpdate, onDelete }) => {
   return (
@@ -8,7 +9,10 @@ const CourseList = ({ courses, onUpdate, onDelete }) => {
         {courses.map((course) => (
           <li key={course._id}>
             {course.title} - ${course.price}
-            <button onClick={() => onUpdate(course._id)}>Edit</button>
+            {/* Directly use the Link component without wrapping a button */}
+            <Link to={`/edit-course/${course._id}`}>
+              <button>Edit</button>
+            </Link>
             <button onClick={() => onDelete(course._id)}>Delete</button>
           </li>
         ))}
