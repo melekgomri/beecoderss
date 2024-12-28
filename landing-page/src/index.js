@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import LandingPage from './LandingPage';
-import AdminPage from './AdminPage';
+import AdminPage from './AdminDashboard';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router> {/* Keep the Router only here */}
       <Routes>
         <Route path="/" element={<App />} /> {/* Page d'accueil */}
         <Route path="/courses" element={<LandingPage />} /> {/* Page des cours */}

@@ -1,0 +1,20 @@
+.landing-page {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    padding: 50px;
+    background: #007bff;
+    color: white;
+  }
+  
+  .features {
+    padding: 20px;
+  }
+  
+  .feature-item {
+    margin: 10px;
+    font-size: 18px;
+  }
+  

@@ -1,35 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 
 const LandingPage = () => {
-  const [courses, setCourses] = useState([]);
-
-  useEffect(() => {
-    axios.get('/api/courses')
-      .then(response => setCourses(response.data))
-      .catch(error => console.error('Error fetching courses:', error));
-  }, []);
-
   return (
     <div className="landing-page">
-      <header className="header">
-        <h1>Welcome to Our Platform</h1>
-        <p>Explore our range of courses and learn something new today!</p>
+      <header className="hero">
+        <h1>Welcome to Course Platform</h1>
+        <p>Your gateway to learning and teaching.</p>
+        <Link to="/admin">
+          <Button variant="contained" color="primary">
+            Go to Admin Interface
+          </Button>
+        </Link>
       </header>
-      <section className="courses-section">
-        <h2>Our Courses</h2>
-        <div className="courses-grid">
-          {courses.map(course => (
-            <div className="course-card" key={course.id}>
-              <img src={course.image} alt={course.title} />
-              <h3>{course.title}</h3>
-              <p>${course.price}</p>
-            </div>
-          ))}
+      <section className="features">
+        <h2>Why Choose Us?</h2>
+        <div className="feature-list">
+          <div className="feature-item">📚 Variety of Courses</div>
+          <div className="feature-item">💡 Expert Instructors</div>
+          <div className="feature-item">🌟 Quality Content</div>
         </div>
       </section>
-      <footer className="footer">© 2024 Your Platform Name</footer>
     </div>
   );
 };
