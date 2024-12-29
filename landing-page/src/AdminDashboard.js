@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CourseForm from "./CourseForm";
 import CourseList from "./CourseList";
 import courseService from "./services/courseService";
+import "./AdminDashboard.css";
+
 
 const AdminDashboard = () => {
   const [courses, setCourses] = useState([]);

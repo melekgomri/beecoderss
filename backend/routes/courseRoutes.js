@@ -16,6 +16,7 @@ router.post('/courses', upload.single('image'), async (req, res) => {
 });
 
 // Read
+
 router.get('/courses', async (req, res) => {
   const courses = await Course.find();
   res.json(courses);

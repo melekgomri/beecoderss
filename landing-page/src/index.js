@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <Router> {/* Keep the Router only here */}
       <Routes>
-        <Route path="/courses" element={<LandingPage />} /> {/* Page d'accueil */}
+        <Route path="/" element={<LandingPage />} /> {/* Page d'accueil */}
         <Route path="/courses" element={<LandingPage />} /> {/* Page des cours */}
         <Route path="/admin" element={<AdminPage />} /> {/* Page d'administration */}
         <Route path="/edit-course/:id" element={<EditCourse />} /> 
